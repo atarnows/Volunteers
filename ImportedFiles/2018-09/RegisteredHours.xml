@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RegisteredHours>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113404</WorkerId>
+    <From>01.09.2018 08:00:00</From>
+    <To>01.09.2018 08:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>3</HospitalNumber>
+    <WorkerId>113527</WorkerId>
+    <From>29.09.2018 16:30:00</From>
+    <To>29.09.2018 18:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113507</WorkerId>
+    <From>01.09.2018 09:30:00</From>
+    <To>01.09.2018 11:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113427</WorkerId>
+    <From>05.09.2018 17:30:00</From>
+    <To>05.09.2018 19:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113447</WorkerId>
+    <From>26.09.2018 14:00:00</From>
+    <To>26.09.2018 14:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>3</HospitalNumber>
+    <WorkerId>113517</WorkerId>
+    <From>20.09.2018 18:30:00</From>
+    <To>20.09.2018 20:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113437</WorkerId>
+    <From>24.09.2018 16:30:00</From>
+    <To>24.09.2018 17:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113504</WorkerId>
+    <From>16.09.2018 18:30:00</From>
+    <To>16.09.2018 19:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113471</WorkerId>
+    <From>22.09.2018 13:00:00</From>
+    <To>22.09.2018 14:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113531</WorkerId>
+    <From>27.09.2018 08:00:00</From>
+    <To>27.09.2018 09:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113485</WorkerId>
+    <From>05.09.2018 10:30:00</From>
+    <To>05.09.2018 13:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>2</HospitalNumber>
+    <WorkerId>113505</WorkerId>
+    <From>16.09.2018 18:30:00</From>
+    <To>16.09.2018 19:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113496</WorkerId>
+    <From>06.09.2018 11:00:00</From>
+    <To>06.09.2018 13:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>4</HospitalNumber>
+    <WorkerId>113451</WorkerId>
+    <From>23.09.2018 14:30:00</From>
+    <To>23.09.2018 16:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>2</HospitalNumber>
+    <WorkerId>113403</WorkerId>
+    <From>27.09.2018 17:30:00</From>
+    <To>27.09.2018 18:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>2</HospitalNumber>
+    <WorkerId>113527</WorkerId>
+    <From>20.09.2018 17:00:00</From>
+    <To>20.09.2018 19:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113532</WorkerId>
+    <From>10.09.2018 08:30:00</From>
+    <To>10.09.2018 11:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>2</HospitalNumber>
+    <WorkerId>113443</WorkerId>
+    <From>24.09.2018 16:30:00</From>
+    <To>24.09.2018 17:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113514</WorkerId>
+    <From>17.09.2018 12:30:00</From>
+    <To>17.09.2018 14:00:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>1</HospitalNumber>
+    <WorkerId>113452</WorkerId>
+    <From>01.09.2018 08:00:00</From>
+    <To>01.09.2018 10:30:00</To>
+  </RegisteredWork>
+  <RegisteredWork>
+    <HospitalNumber>2</HospitalNumber>
+    <WorkerId>113528</WorkerId>
+    <From>24.09.2018 15:30:00</From>
+    <To>24.09.2018 17:30:00</To>
+  </RegisteredWork>
+</RegisteredHours>
