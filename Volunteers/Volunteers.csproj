@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converter\VolunteerDataToViewConverter.cs" />
+    <Compile Include="DataModels\OrganizationData.cs" />
     <Compile Include="DataModels\VolunteerData.cs" />
     <Compile Include="DataModels\VolunteerWorkingHoursData.cs" />
+    <Compile Include="Importers\IOrganizationImporter.cs" />
     <Compile Include="Importers\IVolunteersImporter.cs" />
     <Compile Include="Importers\IVolunteersWorkingHoursImporter.cs" />
+    <Compile Include="Importers\OrganizationsImporter.cs" />
     <Compile Include="ViewProviders\ClassViewDataTableProvider.cs" />
     <Compile Include="DataReaders\CsvDataReader.cs" />
     <Compile Include="Form1.cs">

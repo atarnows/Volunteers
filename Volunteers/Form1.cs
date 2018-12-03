@@ -21,11 +21,12 @@ namespace Volunteers
 
             //Get data from files
             var volunteers = GetVolunteers(importDir);
+            var organizations = GetOrganisations(importDir);
 
             //Load grid views
             LoadVolunteersTab(VolunteerDataToViewConverter.Convert(volunteers));
             LoadClassTab();
-            LoadOrganizationsTab();
+            LoadOrganizationsTab(organizations);
         }
 
         #region Methods for loading data
@@ -34,6 +35,12 @@ namespace Volunteers
             IVolunteersImporter volunteersImporter = new VolunteersImporter(importDir);
             List<VolunteerData> volunteers = volunteersImporter.GetVolunteers();
             return volunteers;
+        }
+        private List<OrganizationData> GetOrganisations(string importDir)
+        {
+            IOrganizationImporter importer = new OrganizationsImporter(importDir);
+            List<OrganizationData> organizations = importer.GetOrganizations();
+            return organizations;
         }
         #endregion
 
@@ -50,10 +57,10 @@ namespace Volunteers
             this.dataGridView2.DataSource = classProvider.GetDataTable();
         }
 
-        private void LoadOrganizationsTab()
+        private void LoadOrganizationsTab(List<OrganizationData> organizations)
         {
             var organizationsProvider = new OrganizationsViewDataTableProvider();
-            this.dataGridView3.DataSource = organizationsProvider.GetDataTable();
+            this.dataGridView3.DataSource = organizationsProvider.GetDataTable(organizations);
         }
         #endregion
     }
