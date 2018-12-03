@@ -54,6 +54,7 @@
     <Compile Include="Importers\IVolunteersImporter.cs" />
     <Compile Include="Importers\IVolunteersWorkingHoursImporter.cs" />
     <Compile Include="Importers\OrganizationsImporter.cs" />
+    <Compile Include="Importers\VolunteersWorkingHoursCsvImporter.cs" />
     <Compile Include="ViewProviders\ClassViewDataTableProvider.cs" />
     <Compile Include="DataReaders\CsvDataReader.cs" />
     <Compile Include="Form1.cs">
