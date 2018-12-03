@@ -29,7 +29,7 @@ namespace Volunteers.ViewProviders
             dataTable.Columns.Add("Nazwisko i imię", typeof(string));
             dataTable.Columns.Add("Data rejestracji", typeof(DateTime));
             dataTable.Columns.Add("Klasa", typeof(string));
-            dataTable.Columns.Add("Godziny semestr", typeof(decimal));
+            dataTable.Columns.Add("Godziny semestr", typeof(double));
             return dataTable;
         }
     }

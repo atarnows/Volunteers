@@ -25,8 +25,8 @@ namespace Volunteers.Converter
                 var allMatching = volunteerWorkingHours.FindAll(v => v.Id == data.Id);
                 foreach (var el in allMatching)
                 {
-                    var hours = (el.DateTo - el.DateFrom).Hours;
-                    view.WorkHours += hours;
+                    var hours = (el.DateTo - el.DateFrom);
+                    view.WorkHours += hours.TotalMinutes/60.0;
                 }
 
                 

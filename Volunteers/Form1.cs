@@ -23,7 +23,8 @@ namespace Volunteers
             //Get data from files
             var volunteers = GetVolunteers(importDir);
             var organizations = GetOrganisations(importDir);
-            var volunteersHours = GetVolunteersWorkingHours(importDir);            // Views
+            var volunteersHours = GetVolunteersWorkingHours(importDir);            
+            // Views
             var volunteersView = VolunteerDataToViewConverter.Convert(volunteers,volunteersHours);
             var classView = VolunteerToClassConventer.Convert(volunteersView);
             //Load grid views
@@ -43,7 +44,7 @@ namespace Volunteers
                     || dir.Contains($"{currentDate.Year}-{currentDate.AddMonths(-2).Month}")
                     || dir.Contains($"{currentDate.Year}-{currentDate.AddMonths(-3).Month}"))
                 {
-                    IVolunteersWorkingHoursImporter imp = new VolunteersWorkingHoursCsvImporter(Path.Combine(dir,"HoursReport.csv"));
+                    IVolunteersWorkingHoursImporter imp = new VolunteersWorkingHoursCsvImporter(dir);
                     var list = imp.GetVolunteersWorkingHours();
                     fullList.AddRange(list);
                 }

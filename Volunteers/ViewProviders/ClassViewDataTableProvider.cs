@@ -25,7 +25,7 @@ namespace Volunteers.ViewProviders
             var currentDate = DateTime.Now;           
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("Klasa", typeof(string));
-            dataTable.Columns.Add("Godziny semestr",typeof(decimal));
+            dataTable.Columns.Add("Godziny semestr",typeof(double));
             return dataTable;
         }
     }

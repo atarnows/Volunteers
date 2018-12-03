@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using Volunteers.DataModels;
@@ -19,6 +20,7 @@ namespace Volunteers.Importers
 
         public List<VolunteerData> GetVolunteers()
         {
+            var ci = new CultureInfo("pl-PL");
             var resultList = new List<VolunteerData>();
             var dataReader = new CsvDataReader();
             var csvResult = dataReader.ReadData(_volunteersFilePath);
@@ -35,7 +37,7 @@ namespace Volunteers.Importers
                     Id = row[indexOfId],
                     Name = row[indexOfName],
                     Surname = row[indexOfSurname],
-                    StartDate = DateTime.Parse(row[indexOfStartDate]),
+                    StartDate = DateTime.Parse(row[indexOfStartDate],ci),
                     ClassName = row[indexOfClass]
                 };
                 resultList.Add(volunteer);
