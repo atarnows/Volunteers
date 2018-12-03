@@ -23,16 +23,33 @@ namespace Volunteers
             //Get data from files
             var volunteers = GetVolunteers(importDir);
             var organizations = GetOrganisations(importDir);
-           
-            // Views
-            var volunteersView = VolunteerDataToViewConverter.Convert(volunteers);
+            var volunteersHours = GetVolunteersWorkingHours(importDir);            // Views
+            var volunteersView = VolunteerDataToViewConverter.Convert(volunteers,volunteersHours);
             var classView = VolunteerToClassConventer.Convert(volunteersView);
             //Load grid views
             LoadVolunteersTab(volunteersView);
             LoadClassTab(classView);
             LoadOrganizationsTab(organizations);
         }
-
+        private List<VolunteerWorkingHoursData> GetVolunteersWorkingHours(string importDir)
+        {
+            var dirsList = Directory.GetDirectories(importDir);
+            var currentDate = DateTime.Now;
+            var fullList = new List<VolunteerWorkingHoursData>();
+            foreach (var dir in dirsList)
+            {
+                
+                if (dir.Contains($"{currentDate.Year}-{currentDate.AddMonths(-1).Month}")
+                    || dir.Contains($"{currentDate.Year}-{currentDate.AddMonths(-2).Month}")
+                    || dir.Contains($"{currentDate.Year}-{currentDate.AddMonths(-3).Month}"))
+                {
+                    IVolunteersWorkingHoursImporter imp = new VolunteersWorkingHoursCsvImporter(Path.Combine(dir,"HoursReport.csv"));
+                    var list = imp.GetVolunteersWorkingHours();
+                    fullList.AddRange(list);
+                }
+            }
+            return fullList;
+        }
         #region Methods for loading data
         private List<VolunteerData> GetVolunteers(string importDir)
         {

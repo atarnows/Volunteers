@@ -9,7 +9,7 @@ namespace Volunteers.Converter
 {
     class VolunteerDataToViewConverter
     {
-        public static List<VolunteerView> Convert(List<VolunteerData> dataList)
+        public static List<VolunteerView> Convert(List<VolunteerData> dataList, List<VolunteerWorkingHoursData> volunteerWorkingHours)
         {
             List<VolunteerView> viewList = new List<VolunteerView>();
             foreach (var data in dataList)
@@ -22,7 +22,14 @@ namespace Volunteers.Converter
 
                 //To implement
                 view.WorkHours = 0;
+                var allMatching = volunteerWorkingHours.FindAll(v => v.Id == data.Id);
+                foreach (var el in allMatching)
+                {
+                    var hours = (el.DateTo - el.DateFrom).Hours;
+                    view.WorkHours += hours;
+                }
 
+                
                 viewList.Add(view);
             }
             return viewList;
