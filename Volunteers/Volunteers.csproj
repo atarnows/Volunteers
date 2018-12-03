@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converter\VolunteerDataToViewConverter.cs" />
+    <Compile Include="Converter\VolunteerToClassConventer.cs" />
+    <Compile Include="DataModels\ClassView.cs" />
     <Compile Include="DataModels\OrganizationData.cs" />
     <Compile Include="DataModels\VolunteerData.cs" />
     <Compile Include="DataModels\VolunteerWorkingHoursData.cs" />

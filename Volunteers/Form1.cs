@@ -23,10 +23,13 @@ namespace Volunteers
             //Get data from files
             var volunteers = GetVolunteers(importDir);
             var organizations = GetOrganisations(importDir);
-
+           
+            // Views
+            var volunteersView = VolunteerDataToViewConverter.Convert(volunteers);
+            var classView = VolunteerToClassConventer.Convert(volunteersView);
             //Load grid views
-            LoadVolunteersTab(VolunteerDataToViewConverter.Convert(volunteers));
-            LoadClassTab();
+            LoadVolunteersTab(volunteersView);
+            LoadClassTab(classView);
             LoadOrganizationsTab(organizations);
         }
 
@@ -52,10 +55,10 @@ namespace Volunteers
             this.dataGridView1.DataSource = volunteersProvider.GetDataTable(volunteers);
         }
 
-        private void LoadClassTab()
+        private void LoadClassTab(List<ClassView> classView)
         {
             var classProvider = new ClassViewDataTableProvider();
-            this.dataGridView2.DataSource = classProvider.GetDataTable();
+            this.dataGridView2.DataSource = classProvider.GetDataTable(classView);
         }
 
         private void LoadOrganizationsTab(List<OrganizationData> organizations)

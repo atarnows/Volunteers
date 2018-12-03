@@ -19,7 +19,6 @@ namespace Volunteers.ViewProviders
                 dataTable.Rows.Add(row);
             }
             return dataTable;
-            return CreateEmptyDataTable();
         }
 
         private DataTable CreateEmptyDataTable()

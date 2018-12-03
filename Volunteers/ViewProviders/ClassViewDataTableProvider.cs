@@ -1,13 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using Volunteers.DataModels;
 
 namespace Volunteers.ViewProviders
 {
     class ClassViewDataTableProvider
     {
-        public DataTable GetDataTable()
+        public DataTable GetDataTable(List<ClassView> classViewList)
         {
-            return CreateEmptyDataTable();
+            DataTable dataTable = CreateEmptyDataTable();
+            foreach (var el in classViewList )
+            {
+                var row = dataTable.NewRow();
+                row[0] = el.Name;
+                row[1] = el.WorkingHours;
+                dataTable.Rows.Add(row);
+            }
+            return dataTable;
         }
             
         private DataTable CreateEmptyDataTable()
